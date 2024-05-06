@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:hsqldb:mem:testdb
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    username: SA
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  flyway:
+    url: jdbc:hsqldb:mem:testdb
+    user: sa
+    password:
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+    enabled: true
